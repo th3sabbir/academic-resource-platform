@@ -14,7 +14,7 @@ https://th3sabbir.github.io/academic-resource-platform
 *   **Class Routine:** Displays a sample class timetable.
 *   **Tutorials:** Curated list of recommended YouTube channels for CSE students covering programming, DSA, and web development.
 *   **Blog:** Collection of recommended blogs and learning platforms for CSE students.
-*   **"Feeling Generous?" Section:** Links to Google Forms for students to contribute questions and notes.
+*   **Got Something to Share? Section:** Links to Google Forms for students to contribute questions and notes.
 *   **Collapsible Sections:** Interactive FAQ and Blood Donation Portal information.
 
 ## Technologies Used
