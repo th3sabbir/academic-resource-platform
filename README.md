@@ -35,7 +35,6 @@ https://th3sabbir.github.io/academic-resource-platform
 *   `blog.html`: List of recommended blogs.
 *   `style.css`: Main stylesheet for the homepage and shared styles.
 *   `uits_logo.svg`: University logo.
-*   *(Other HTML files use inline or internal CSS, with some shared structural elements)*
 
 
 ## Future Enhancements (Ideas)
