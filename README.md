@@ -1,4 +1,4 @@
-# UITS Student Resource Platform
+# UITS Students Resource Platform
 
 An unofficial web-based resource hub designed to centralize useful information and materials for students of the University of Information Technology and Sciences (UITS). This project was developed as a part of the Web Application Design course.
 
