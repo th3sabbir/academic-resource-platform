@@ -37,14 +37,13 @@ https://th3sabbir.github.io/academic-resource-platform
 *   `style.css`: Main stylesheet for the homepage and shared styles.
 *   `uits_logo.svg`: University logo.
 
-
-## Future Enhancements (Ideas)
+<!-- ## Future Enhancements (Ideas)
 
 *   Consolidate all CSS into external stylesheets.
 *   Implement a more robust search functionality.
 *   User authentication for personalized content (beyond the scope of this project).
 *   Dark mode toggle.
-
+-->
 ---
 
 This project serves as a demonstration of front-end web development skills.
