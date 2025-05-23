@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Browser - UITS Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+            background-color: rgb(218, 237, 255);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; 
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .semester-browser-card {
+            background-color: #2a2f3a; 
+            color: #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 650px; 
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .card-main-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .department-selector-container {
+            margin-bottom: 20px;
+            position: relative; 
+        }
+
+        .department-select-button {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ced4da;
+            padding: 12px 15px;
+            width: calc(100% - 70px);
+            text-align: left;
+            font-size: 1em;
+            border-radius: 25px; 
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            display: inline-block; 
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+
+        .department-select-button:hover {
+            background-color: #f8f9fa;
+        }
+
+        .clear-department-button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 0.8em;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            transition: background-color 0.2s ease;
+            vertical-align: middle;
+        }
+        .clear-department-button:hover {
+            background-color: #5a6268;
+        }
+
+
+        .department-options-list {
+            list-style: none;
+            padding: 0;
+            
+            margin: 5px 0 0 0;
+            background-color: #f8f9fa;
+            border: 3px solid #ddd;
+            border-radius: 5px;
+            position: absolute;
+            width: calc(100% - 70px); 
+            top: 100%; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            color: #333;
+        }
+        
+        .department-options-list.visible {
+             max-height: 200px;
+             padding: 5px 0;
+        }
+
+        .department-options-list li {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .department-options-list li:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .semester-buttons-grid {
+            display: none; 
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .semester-button-link {
+            background-color: #3c424f;
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 12px 10px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            border: 1px solid #4a505c;
+        }
+
+        .semester-button-link:hover {
+            background-color: #4a505c;
+            transform: translateY(-2px);
+        }
+
+        
+        .page-footer-text {
+            text-align: center;
+            color: #555;
+            font-size: 0.9em;
+            margin-top: 30px; 
+        }
+        .back-to-index-link {
+            display: inline-block; 
+            color: #333;
+            font-size: 1em;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            transition: background-color 0.2s ease;
+            margin-bottom: 25px; 
+        }
+
+        .back-to-index-link:hover {
+            background-color: #dde1e5;
+            text-decoration: none;
+        }
+        .footer {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <img src="uits_logo.svg" alt="Logo" class="logo" align="center" style="width: 100%;width: 555px;">
+    </header>
+    <br><br>
+    <div class="footer">
+    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>©UITS Resources</i></p>
+   
+
+  </div>
+    
+
+    <div class="semester-browser-card">
+        <h2 class="card-main-title">Semester Browser</h2>
+
+        <div class="department-selector-container">
+            <button type="button" id="departmentSelectBtn" class="department-select-button">
+                Select you Department...
+            </button>
+            <button type="button" id="clearDepartmentBtn" class="clear-department-button">Clear?</button>
+            
+            <ul id="departmentOptions" class="department-options-list">
+                <li data-value="CSE">Computer Science and Engineering</li>
+                <li data-value="CIVIL">Civil Engineering</li>
+                <li data-value="EEE">Electrical and Electronic Engineering</li>
+                
+            
+            </ul>
+        </div>
+
+        <div id="semesterGrid" class="semester-buttons-grid">
+            <!-- <a href="#" class="semester-button-link">Semester 1</a>
+            <a href="#" class="semester-button-link">Semester 2</a>
+            <a href="#" class="semester-button-link">Semester 3</a>
+            <a href="#" class="semester-button-link">Semester 4</a>
+            <a href="#" class="semester-button-link">Semester 5</a>
+            <a href="#" class="semester-button-link">Semester 6</a>
+            <a href="#" class="semester-button-link">Semester 7</a>
+            <a href="#" class="semester-button-link">Semester 8</a>
+            -->
+        </div>
+    </div>
+
+    <a href="index.html" class="back-to-index-link">Go back to index</a>
+
+    
+
+    <script>
+   const departmentSemesters = {
+    CSE: [
+        { name: "Semester 1", url: "https://drive.google.com/drive/folders/1_eLOFtG7cHJFxaIbNwysFecQFxPNE-_4" },
+        { name: "Semester 2", url: "https://drive.google.com/drive/folders/1_bke5c5MMU2yEUCq1zhKyN9ARvaVhBwc" },
+        { name: "Semester 3", url: "https://drive.google.com/drive/folders/1a-v05klj706PZbL-YjWx3LSTs3Q7kvSB" },
+        { name: "Semester 4", url: "https://drive.google.com/drive/folders/1_ihH9qW1qBSPKn_cHzf6w6cRUcYEE3Zr" },
+        { name: "Semester 5", url: "https://drive.google.com/drive/folders/1_fx4sCES5sL1YeWEI0cSQd850j6Zhkre" },
+        { name: "Semester 6", url: "https://drive.google.com/drive/folders/1_jlvvJXUVnh0HDQp4VR-xhYtTHryj20C" },
+        { name: "Semester 7", url: "https://drive.google.com/drive/folders/1_hTSpADeXWoHnm90pzbsO7lpZQKAlHkb" },
+        { name: "Semester 8", url: "https://drive.google.com/drive/folders/1_cWZ_73eWMo4n_WK_DWPlQMoGxTRQWk2" }
+    ],
+    CIVIL: [
+        { name: "Semester 1", url: "civil-sem1.html" },
+        { name: "Semester 2", url: "civil-sem2.html" },
+        { name: "Semester 3", url: "civil-sem3.html" },
+        { name: "Semester 4", url: "civil-sem4.html" }
+        
+    ],
+    EEE: [
+        { name: "Semester 1", url: "eee-sem1.html" },
+        { name: "Semester 2", url: "eee-sem2.html" },
+        { name: "Semester 3", url: "eee-sem3.html" },
+        { name: "Semester 4", url: "eee-sem4.html" }
+       
+    ]
+    
+};
+
+const departmentSelectBtn = document.getElementById('departmentSelectBtn');
+const departmentOptions = document.getElementById('departmentOptions');
+const semesterGrid = document.getElementById('semesterGrid');
+const clearDepartmentBtn = document.getElementById('clearDepartmentBtn');
+
+departmentSelectBtn.addEventListener('click', function() {
+    departmentOptions.classList.toggle('visible');
+});
+
+
+departmentOptions.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        const selectedDepartmentText = event.target.textContent;
+        const selectedDepartmentValue = event.target.dataset.value;
+
+        departmentSelectBtn.textContent = selectedDepartmentText;
+        departmentOptions.classList.remove('visible');
+
+        
+        const semesters = departmentSemesters[selectedDepartmentValue] || [];
+        semesterGrid.innerHTML = ''; 
+        semesters.forEach(sem => {
+            const a = document.createElement('a');
+            a.href = sem.url;
+            a.className = 'semester-button-link';
+            a.textContent = sem.name;
+            a.target = '_blank';
+            semesterGrid.appendChild(a);
+        });
+
+        semesterGrid.style.display = semesters.length ? 'grid' : 'none';
+    }
+});
+
+
+clearDepartmentBtn.addEventListener('click', function() {
+    departmentSelectBtn.textContent = 'Select you Department...';
+    departmentOptions.classList.remove('visible');
+    semesterGrid.style.display = 'none';
+    semesterGrid.innerHTML = '';
+});
+
+
+document.addEventListener('click', function(event) {
+    if (!departmentSelectBtn.contains(event.target) && !departmentOptions.contains(event.target)) {
+        departmentOptions.classList.remove('visible');
+    }
+});
+    </script>
+
+</body>
+</html>

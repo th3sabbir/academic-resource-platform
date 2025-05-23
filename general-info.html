@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Info - UITS Resources</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
+    
+    <style>
+       
+        body {
+            font-family: "Outfit", sans-serif;
+            background-color: rgb(218, 237, 255);
+            color: #333; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .info-card-container {
+            background-color: #2a2f3a; 
+            color: #e0e0e0; 
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 650px; 
+            text-align: center;
+            margin-bottom: 25px; 
+        }
+
+        .info-card-title {
+            font-size: 1.6em; 
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .title-separator {
+            border: 0;
+            border-radius: 20px;
+            height: 10px;
+            background-color: rgba(224, 224, 224, 0.3); 
+            width: 60%;
+            margin: 0 auto 25px auto; 
+        }
+
+       
+        .info-button-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .info-button {
+            background-color: #3c424f; 
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 18px 15px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            border: 1px solid #4a505c; 
+        }
+
+        .info-button:hover {
+            background-color: #4a505c; 
+            transform: translateY(-2px);
+        }
+
+       
+        .drive-link-text {
+            font-size: 0.9em;
+            color: #777; 
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .drive-link-text a {
+            color: #007bff; 
+            text-decoration: none;
+        }
+        .drive-link-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-to-index-link {
+            display: inline-block; 
+            color: #333;
+            font-size: 1em;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            transition: background-color 0.2s ease;
+            margin-bottom: 25px; 
+        }
+
+        .back-to-index-link:hover {
+            background-color: #dde1e5;
+            text-decoration: none;
+        }
+        
+       
+        .page-footer-text {
+            text-align: center;
+            color: #555; 
+            font-size: 0.9em;
+            margin-top: 20px; 
+        }
+        .footer {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+     <div style="text-align: center;"> <img src="uits_logo.svg" alt="Logo" class="logo" align="center" style="width: 100%;width: 555px;">
+     </div>
+    </header>
+    <br><br><br>
+
+  <div class="footer">
+    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>©UITS Resources</i></p>
+   
+
+  </div>
+
+    <div class="info-card-container">
+        <h2 class="info-card-title">Find your info here</h2>
+        <hr class="title-separator">
+
+        <div class="info-button-grid">
+            <a href="https://drive.google.com/drive/folders/1i0UUsgy68Nypc2ylPsaB-Teljkf0NSUD" class="info-button" target="_blank">University Questions</a>
+            <a href="https://drive.google.com/drive/folders/1tCrwALNcqG9GZ_r3mVi3MFbu5mlLE2Xe" class="info-button" target="_blank">CSE Course Lists</a>
+            <a href="https://drive.google.com/drive/folders/1E_FYLX-RMFZEqeZHn0Nms2OUSJmLXUQH" class="info-button" target="_blank">CSE Course Outlines</a>
+            <a href="https://drive.google.com/drive/folders/1sl_cPO2lI276il35NZyIN7vr6Pc6HuSg" class="info-button" target="_blank">Departments info</a>
+            <a href="https://drive.google.com/drive/folders/1_pK1GknO6Gr8iLQtNPZ8zHB9RWauC-Z2" class="info-button" target="_blank">Elective Courses</a>
+            <a href="https://drive.google.com/drive/folders/1BKYmB_nSw7y0zN7eKkDg6Sgudy66MSwU" class="info-button" target="_blank">Task Materials</a>
+            
+        </div>
+    </div>
+
+    <p class="drive-link-text">
+        ( <a href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL">Link to the Google Drive instead?</a> )
+    </p>
+
+    <a href="index.html" class="back-to-index-link">Go back to index</a>
+    <br>
+
+
+</body>
+</html>

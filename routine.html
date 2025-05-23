@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
+    
+</head>
+<body>
+    <style>
+        body {
+    font-family: "Outfit", sans-serif;
+    background-color: rgb(218, 237, 255);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    animation-name: text;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes text {
+  0% {
+    color: #333;
+     }
+  25% {
+    color: #4CAF50;
+      }
+  50% {
+    color: #2196F3;
+      }
+  75% {
+    color: #FF9800;
+}
+  100% {
+    color: #333;
+       }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #4CAF50;
+    color: white;
+}
+
+td[colspan] {
+    background: #e0f7e0;
+}
+
+td:first-child {
+    font-weight: bold;
+    background: #d3e0dc;
+}
+.day{
+    writing-mode: tb;
+    transform: rotate(-180deg);
+    border: 2px solid black;
+}
+
+    </style>
+    <h2>Class Timetable-(Spring-2025/Section-3C)</h2>
+    <table>
+        <tr>
+            <th> </th>
+            <!-- <th>Room</th> -->
+            <th>08:00 AM-9:00 AM</th>
+            <th>09:01 AM-10:00 AM</th>
+            <th>10:01 AM-11:00 AM</th>
+            <th>11:01 AM-12:00 AM</th>
+            <th>12:01 PM-01:00 PM</th>
+            <th>1:01 PM-2:00 PM</th>
+            <th>2:01 PM-03:00 PM</th>
+            <th>03:01 PM-04:00 PM</th>
+            <!-- <th>01:01 PM-02:00 PM</th> -->
+        </tr>
+        
+        
+        <tr>
+            <td rowspan="1" class="day">Sunday</td>
+            
+            <td colspan="1"></td>
+            <td colspan="1">Digital Logic Design (DLD) <br> Ratri Datta (RD) <br> Room no - 602</td>
+            <td colspan="1">Data Communication (DC) <br> Nazmun Nahar Tui (NNT) <br> Room no - 603</td>
+            <td colspan="1"></td>
+            <td colspan="1">Data Structures & Algorithms I (DSA 1) <br> Tahmina Islam(TIC) <br> Room no - 603</td>
+            <td colspan="3">Web Application Design Lab (WAD Lab) <br>Faias Satter (FSC), Nazmun Nahar Tui (NNT) <br> Room no - 601</td>
+        </tr>
+        
+
+        
+        <tr>
+            <td rowspan="1" class="day">Monday</td>
+            
+            
+            <td colspan="3">Database Management System Lab (DMS Lab) <br> Khandoker Nosiba Arifin (KNA), Zafrul Islam (SMZI) <br> Room no - 212</td>
+            <td colspan="1">Database Management System (DMS) <br> Fatema Tuj Tarannom Esty (FTTE) <br> Room no - 412</td>
+            <td colspan="1">Data Communication (DC) <br> Nazmun Nahar Tui (NNT) <br> Room no - 510</td>
+            
+            <td colspan="3"> </td>
+        </tr>
+        
+      
+
+    
+        <tr>
+            <td class="day">Tuesday</td>
+            
+            <td colspan="1">Linear Algebra, Vector & Geometry <br> Roksana Afroz (RAF) <br> Room no - 203</td>
+            <td colspan="1">Data Structures & Algorithms I (DSA 1) <br> Tahmina (TIC) <br> Room no - 412</td>
+            <td colspan="2">Digital Logic Design Lab (DLD Lab) <br> Ratri Datta (RD) <br> Room no - 406 (3C1)</td>
+            <td colspan="2">Digital Logic Design (DLD) <br> Ratri Datta (RD) <br> Room no - 602</td>
+            <td colspan="2">Database Management System (DMS) <br> Fatema Tuj Tarannom Esty (FTTE) <br> Room no - 602</td>
+        </tr>
+
+        
+       <tr>
+            <td class="day">Tuesday</td>
+            
+            <td colspan="8"> </td>
+        
+        </tr>
+        
+
+      
+        <tr>
+            <td class="day">Thursday</td>
+            <td colspan="2">Linear Algebra, Vector & Geometry <br> Roksana Afroz (RAF) <br> Room no - 603</td>
+            <td colspan="2">Digital Logic Design Lab (DLD Lab) <br> Ratri Datta (RD) <br> Room no - 406 (3C2)</td>
+            <td colspan="1">Data Structures & Algorithms (DSA) <br> Tahmina Islam (TIC) <br> Room no - 412</td>
+            <td colspan="3">Data Structures Algorithms Lab (DSA Lab) <br> Ratri Datta (RD), MD Ismail (MD) <br> Room no - 411</td>
+            
+        </tr>
+    </table>
+</body>
+</html>

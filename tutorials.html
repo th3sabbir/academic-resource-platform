@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials Collection - UITS Resources</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+            background-color: rgb(218, 237, 255);
+            color: #e0e0e0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .tutorial-page-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tutorials-card {
+            background-color: #2a2f3a; 
+            color: #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 650px; 
+            text-align: center;
+            margin-bottom: 25px;
+            /* display: flex;
+            flex-direction: column; */
+        }
+        .tutorial-description { 
+            display: block;
+            font-size: 0.8em;
+            color: #b0b0c0;
+            margin-top: 4px;
+        }
+
+        .card-main-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
+            transition: opacity 0.3s ease;
+        }
+
+        
+        .card-view {
+            display: none; 
+            flex-direction: column;
+            width: 100%;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .card-view.active-view {
+            display: flex; 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        
+        .category-btn, .link-btn {
+            background-color: #3b435c; 
+            color: #e0e0e0;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 12px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            text-decoration: none; 
+            display: block; 
+            box-sizing: border-box;
+        }
+
+        .category-btn:hover, .link-btn:hover {
+            background-color: #4a5372;
+            transform: translateY(-2px);
+        }
+        .category-btn:last-child, .link-btn:last-child {
+            margin-bottom: 0;
+        }
+
+        
+        .back-btn {
+            background-color: #555c70;
+            color: #e0e0e0;
+            border: none;
+            padding: 10px 15px;
+            text-align: left;
+            font-size: 0.9em;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.2s ease;
+            align-self: flex-start; 
+        }
+        .back-btn:hover {
+            background-color: #666c80;
+        }
+
+        .link-button-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        
+        .page-footer-text {
+            text-align: center;
+            color: #adb5bd; 
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        .back-to-index-link {
+            display: inline-block; 
+            color: #333;
+            font-size: 1em;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            transition: background-color 0.2s ease;
+            margin-bottom: 25px; 
+        }
+
+        .back-to-index-link:hover {
+            background-color: #dde1e5;
+            text-decoration: none;
+        }
+        .footer {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <img src="uits_logo.svg" alt="Logo" class="logo" align="center" style="width: 100%;width: 555px;">
+    </header>
+    <br><br>
+    <div class="footer">
+    <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>©UITS Resources</i></p>
+   
+
+  </div>
+    <h1 class="blog-header" style=" text-align: center;font-size: 2em;margin-bottom: 40px;color: #2c3e50;">YouTube Channels for CSE Students</h1>
+
+    <div class="tutorial-page-container">
+        <div class="tutorials-card">
+         
+<div class="link-button-list">
+    
+    <div class="card-main-title" style="font-size: 1.2em;">🎓 Programming & Computer Science Foundations</div>
+
+    <a href="https://www.youtube.com/c/Freecodecamp" target="_blank" rel="noopener noreferrer" class="link-btn">
+        freeCodeCamp.org<br><span class="tutorial-description">Comprehensive tutorials on various programming languages and concepts.</span>
+    </a>
+    <a href="https://www.youtube.com/c/CSDojo" target="_blank" rel="noopener noreferrer" class="link-btn">
+        CS Dojo<br><span class="tutorial-description">Offers clear explanations on programming concepts and interview preparation.</span>
+    </a>
+    <a href="https://www.youtube.com/c/mitocw" target="_blank" rel="noopener noreferrer" class="link-btn">
+        MIT OpenCourseWare<br><span class="tutorial-description">Access to MIT's course materials, including computer science lectures.</span>
+    </a>
+    <a href="https://www.youtube.com/c/NesoAcademy" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Neso Academy<br><span class="tutorial-description">Detailed tutorials on programming and computer science subjects.</span>
+    </a>
+    <a href="https://www.youtube.com/c/AbdulBari" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Abdul Bari<br><span class="tutorial-description">Simplified explanations of complex computer science topics.</span>
+    </a>
+
+    
+    <div class="card-main-title" style="font-size: 1.2em; margin-top: 25px;">📚 Data Structures & Algorithms (DSA)</div>
+
+    <a href="https://www.youtube.com/c/mycodeschool" target="_blank" rel="noopener noreferrer" class="link-btn">
+        mycodeschool<br><span class="tutorial-description">Focused tutorials on data structures and algorithms.</span>
+    </a>
+    <a href="https://www.youtube.com/c/programmingwithmosh" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Programming with Mosh<br><span class="tutorial-description">In-depth courses on DSA and software development.</span>
+    </a>
+    <a href="https://www.youtube.com/c/Telusko" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Telusko<br><span class="tutorial-description">Covers DSA concepts with practical examples.</span>
+    </a>
+    <a href="https://www.youtube.com/c/codebasics" target="_blank" rel="noopener noreferrer" class="link-btn">
+        codebasics<br><span class="tutorial-description">Teaches DSA using Python with real-world examples.</span>
+    </a>
+    <a href="https://www.youtube.com/@JennyslecturesCSIT" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Jenny's Lectures CS/IT<br><span class="tutorial-description">Offers lectures on DSA and other CS topics.</span>
+    </a>
+
+    
+    <div class="card-main-title" style="font-size: 1.2em; margin-top: 25px;">🌐 Web Development (Frontend & Backend)</div>
+
+    <a href="https://www.youtube.com/c/TheNetNinja" target="_blank" rel="noopener noreferrer" class="link-btn">
+        The Net Ninja<br><span class="tutorial-description">Comprehensive tutorials on web development technologies.</span>
+    </a>
+    <a href="https://www.youtube.com/c/TraversyMedia" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Traversy Media<br><span class="tutorial-description">Covers both frontend and backend development tutorials.</span>
+    </a>
+    <a href="https://www.youtube.com/c/Codevolution" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Codevolution<br><span class="tutorial-description">Focuses on modern web development frameworks and tools.</span>
+    </a>
+    <a href="https://www.youtube.com/c/WebDevSimplified" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Web Dev Simplified<br><span class="tutorial-description">Simplifies complex web development topics for beginners.</span>
+    </a>
+    <a href="https://www.youtube.com/c/Fireship" target="_blank" rel="noopener noreferrer" class="link-btn">
+        Fireship<br><span class="tutorial-description">Provides concise and informative web development tutorials.</span>
+    </a>
+</div>
+
+
+            </div>
+        </div>
+
+        <a href="index.html" class="back-to-index-link">Go back to index</a>
+        <br>
+    
+
+</body>
+</html>
