@@ -21,8 +21,9 @@ https://th3sabbir.github.io/academic-resource-platform
 
 *   HTML5
 *   CSS3 (including Flexbox and Grid for layout)
-*   Vanilla JavaScript (for interactive elements like collapsibles and dynamic content loading)
+*   JavaScript (for interactive elements like collapsibles and dynamic content loading)
 *   Font Awesome (for icons)
+*   Google Fonts (Outfit)
 *   Google Drive & Google Forms (for external resource hosting and contributions)
 
 ## Project Structure
